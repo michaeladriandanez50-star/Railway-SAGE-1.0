@@ -103,7 +103,7 @@ export default function Login({ setScreen }: { setScreen: (s: Screen) => void })
       )}
 
       {/* KALIWA: Full Screen Image */}
-      <div style={{ flex: 1, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(rgba(138, 26, 33, 0.85), rgba(138, 26, 33, 0.85)), url(/tup-bg.png) center/cover' }}>
+      <div style={{ flex: 1, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(rgba(138, 26, 33, 0.85), rgba(138, 26, 33, 0.85)), url("${tupBg}") center/cover' }}>
         <div style={{ textAlign: 'center', color: '#fff', padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
            <img src={sageLogo} alt="SAGE Logo" style={{ width: '100px', height: '100px', objectFit: 'contain', marginBottom: '1.5rem', borderRadius: '16px', boxShadow: '0 8px 24px rgba(0,0,0,0.2)' }} />
            <h1 style={{ fontFamily: 'Fraunces, serif', fontSize: '3.5rem', margin: 0, lineHeight: 1 }}>SAGE</h1>
