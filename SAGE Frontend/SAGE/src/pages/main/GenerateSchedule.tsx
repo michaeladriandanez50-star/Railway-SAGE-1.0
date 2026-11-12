@@ -40,7 +40,7 @@ export default function GenerateSchedule({ setScreen }: { setScreen: (s: any) =>
     const loadCurriculumAndSections = async () => {
       setIsLoadingData(true);
       const urlsToTry = [
-        'https://krdcxvsf-5000.asse.devtunnels.ms/api/schedule/init-data'
+        'https://sage-backend-production-d170a99e.up.railway.app/api/schedule/init-data'
       ];
 
       for (const url of urlsToTry) {
@@ -149,7 +149,7 @@ export default function GenerateSchedule({ setScreen }: { setScreen: (s: any) =>
     setErrorMessage(null);
 
     try {
-      const response = await fetch(`https://krdcxvsf-5000.asse.devtunnels.ms/api/schedule/generate`, {
+      const response = await fetch(`https://sage-backend-production-d170a99e.up.railway.app/api/schedule/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
