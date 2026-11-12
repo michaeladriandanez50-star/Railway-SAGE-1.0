@@ -24,7 +24,7 @@ export default function Login({ setScreen }: { setScreen: (s: Screen) => void })
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/login', {
+      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export default function Login({ setScreen }: { setScreen: (s: Screen) => void })
     setResetError(''); // I-clear ang error bago mag-send
     
     try {
-      const response = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/forgot-password', {
+      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: resetEmail })
