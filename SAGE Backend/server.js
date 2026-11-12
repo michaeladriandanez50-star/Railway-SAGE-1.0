@@ -207,7 +207,7 @@ app.post('/api/forgot-password', async (req, res) => {
             { expiresIn: '15m' }
         );
 
-        const resetLink = `https://krdcxvsf-3000.asse.devtunnels.ms/reset-password?token=${resetToken}`;
+        const resetLink = `sage-frontend-production.up.railway.app/reset-password?token=${resetToken}`;
 
         const mailOptions = {
             from: `"SAGE System" <${process.env.EMAIL_USER}>`,
