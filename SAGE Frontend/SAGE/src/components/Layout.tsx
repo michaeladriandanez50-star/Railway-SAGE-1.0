@@ -224,7 +224,7 @@ export function MainShell({ screen, setScreen, children }: { screen: Screen; set
     formData.append('email', user.email);
 
     try {
-        const response = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/user/upload-photo', {
+        const response = await fetch('https://sage-backend-production-d170a99e.up.railway.app/api/user/upload-photo', {
         method: 'POST',
         body: formData,
       });
