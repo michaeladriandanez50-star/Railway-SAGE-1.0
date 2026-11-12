@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Screen } from '../types';
 import { I } from './Icons';
+import sageLogo from '../assets/sage-logo.png';
 
 // --- HELPER FUNCTION PARA SA ACTIVE TERM ---
 const getCurrentTerm = () => {
@@ -63,7 +64,7 @@ function Sidebar({
       {/* Logo & Toggle Section */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: collapsed ? 'center' : 'space-between', marginBottom: '2.5rem', overflow: 'hidden' }}>
         <div onClick={() => { if (collapsed) setCollapsed(false); }} title={collapsed ? "Click to expand sidebar" : ""} style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', cursor: collapsed ? 'pointer' : 'default' }}>
-          <img src="/sage-logo.png" alt="SAGE" style={{ width: collapsed ? '44px' : '36px', height: 'auto', borderRadius: '4px', transition: 'width 0.3s' }} /> 
+          <img src={sageLogo} alt="SAGE Official Logo" style={{ width: collapsed ? '44px' : '36px', height: 'auto', borderRadius: '4px', transition: 'width 0.3s' }} /> 
           {!collapsed && (
             <div>
               <div style={{ fontFamily: 'Fraunces, serif', fontWeight: 700, fontSize: '1.3rem', color: '#fff', lineHeight: 1 }}>SAGE</div>
