@@ -39,7 +39,7 @@ export default function ResetPassword({ setScreen }: { setScreen: (s: Screen) =>
     setMessage({ type: '', text: '' });
 
     try {
-      const response = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/reset-password', {
+      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token, newPassword })
