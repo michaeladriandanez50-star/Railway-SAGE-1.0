@@ -33,7 +33,7 @@ export default function SignUp({ setScreen }: { setScreen: (s: Screen) => void }
     setIsLoading(true);
 
     try {
-      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/signup', {
+      const response = await fetch('https://sage-backend-production-d170a99e.up.railway.app/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
