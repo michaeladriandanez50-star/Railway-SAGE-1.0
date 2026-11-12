@@ -440,7 +440,7 @@ app.use('/api/schedule', scheduleRoutes);
 
 app.use(cors({
   origin: [
-    'https://sage-frontend-production.up.railway.app'
+    ''
   ],
   credentials: true
 }));
