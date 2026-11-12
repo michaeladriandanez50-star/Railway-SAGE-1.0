@@ -45,7 +45,7 @@ export default function Login({ setScreen }: { setScreen: (s: Screen) => void })
       localStorage.setItem('sage_user', JSON.stringify(data.user));
 
       // I-redirect ang user sa 2FA screen bago tuluyang pumasok sa Dashboard
-      setScreen('dashboard');
+      setScreen('2fa');
 
     } catch (error: any) {
       setErrorMessage(error.message);
