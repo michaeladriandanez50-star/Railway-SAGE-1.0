@@ -41,14 +41,14 @@ export default function Dashboard({ setScreen }: { setScreen: (s: Screen) => voi
     const fetchDashboardData = async () => {
       try {
         // Kunin ang Stats
-        const statsRes = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/dashboard-stats');
+        const statsRes = await fetch('https://sage-backend-production-d170a99e.up.railway.app/api/dashboard-stats');
         if (statsRes.ok) {
           const statsData = await statsRes.json();
           setStats(statsData);
         }
 
         // Kunin ang Logs
-        const logsRes = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/logs');
+        const logsRes = await fetch('https://sage-backend-production-d170a99e.up.railway.app/api/logs');
         if (logsRes.ok) {
           const logsData = await logsRes.json();
           setLogs(logsData);
