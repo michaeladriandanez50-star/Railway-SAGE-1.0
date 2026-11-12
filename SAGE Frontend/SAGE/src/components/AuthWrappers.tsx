@@ -1,4 +1,7 @@
 import React from 'react';
+import sageLogo from '../assets/sage-logo.png';
+import tupBg from '../assets/tup-bg.png';
+
 
 // SAGE Logo mark
 export function SageLogo({ size = 48, mono = false }: { size?: number; mono?: boolean }) {
@@ -51,7 +54,7 @@ export function AuthCard({ children }: { children: React.ReactNode }) {
 export function AuthLeft() {
   return (
     <div style={{ 
-      backgroundImage: "url('/tup-bg.png')",
+      backgroundImage: `url(${tupBg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       position: 'relative', 
@@ -68,7 +71,7 @@ export function AuthLeft() {
       <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(100, 10, 25, 0.75)' }}></div>
       
       <img 
-        src="/sage-logo.png" 
+        src={sageLogo}
         alt="SAGE Official Logo" 
         style={{ position: 'relative', zIndex: 1, width: '130px', height: 'auto', marginBottom: '0.5rem', filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))' }} 
       />
