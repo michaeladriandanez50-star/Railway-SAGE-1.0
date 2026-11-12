@@ -58,7 +58,7 @@ export default function Schedule() {
 
   // Load latest generated schedule from backend if available
   useEffect(() => {
-    fetch(`https://krdcxvsf-5000.asse.devtunnels.ms/api/schedule/latest`)
+    fetch(`https://sage-backend-production-d170a99e.up.railway.app/api/schedule/latest`)
       .then(res => res.json())
       .then(data => {
         if (data.success && Array.isArray(data.schedule) && data.schedule.length > 0) {
