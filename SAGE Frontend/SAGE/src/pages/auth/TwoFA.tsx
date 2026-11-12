@@ -27,7 +27,7 @@ export default function TwoFA({ setScreen }: { setScreen: (s: Screen) => void })
 
   const sendOtpToBackend = async () => {
     try {
-      await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/send-otp', {
+      await fetch('sage-backend-production-d170a99e.up.railway.app/api/send-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: userEmail })
@@ -57,7 +57,7 @@ export default function TwoFA({ setScreen }: { setScreen: (s: Screen) => void })
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/send-otp', {
+      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/send-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: userEmail })
@@ -87,7 +87,7 @@ export default function TwoFA({ setScreen }: { setScreen: (s: Screen) => void })
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://krdcxvsf-5000.asse.devtunnels.ms/api/verify-otp', {
+      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/verify-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: userEmail, otp_code: fullCode })
