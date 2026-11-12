@@ -17,14 +17,14 @@ export default function Login({ setScreen }: { setScreen: (s: Screen) => void })
   const [showSuccessToast, setShowSuccessToast] = useState(false);
   const [resetError, setResetError] = useState('');
 
-  // 1. Ang main function para maikonekta sa Node.js backend
+  // 1. Ang main function para maikonekta sa Node.js 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
     setIsLoading(true);
 
     try {
-      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/login', {
+      const response = await fetch('https://sage-backend-production-d170a99e.up.railway.app/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export default function Login({ setScreen }: { setScreen: (s: Screen) => void })
     setResetError(''); // I-clear ang error bago mag-send
     
     try {
-      const response = await fetch('sage-backend-production-d170a99e.up.railway.app/api/forgot-password', {
+      const response = await fetch('https://sage-backend-production-d170a99e.up.railway.app/api/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: resetEmail })
