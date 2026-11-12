@@ -1,5 +1,4 @@
 const express = require('express');
-const cors = require('cors');
 const bcrypt = require('bcrypt'); 
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
@@ -7,7 +6,6 @@ require('dotenv').config();
 const db = require('./db');
 const createUploadRouter = require('./uploadRoutes');
 const multer = require('multer'); 
-const cors = require('cors');
 // 1. First, create the 'app'
 const app = express(); 
 
@@ -438,12 +436,6 @@ app.post('/api/user/upload-photo', (req, res) => {
 const scheduleRoutes = require('./scheduleRoutes');
 app.use('/api/schedule', scheduleRoutes);
 
-app.use(cors({
-  origin: [
-    ''
-  ],
-  credentials: true
-}));
 
 
 // Start Server
