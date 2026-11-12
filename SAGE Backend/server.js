@@ -8,6 +8,7 @@ const createUploadRouter = require('./uploadRoutes');
 const multer = require('multer'); 
 // 1. First, create the 'app'
 const app = express(); 
+const cors = require('cors');
 
 // 2. THEN, use the middlewares
 app.use(cors());
@@ -436,7 +437,12 @@ app.post('/api/user/upload-photo', (req, res) => {
 const scheduleRoutes = require('./scheduleRoutes');
 app.use('/api/schedule', scheduleRoutes);
 
-
+app.use(cors({
+  origin: [
+    'https://sage-frontend-production.up.railway.app'
+  ],
+  credentials: true
+}));
 
 // Start Server
 const PORT = process.env.PORT || 5000;
