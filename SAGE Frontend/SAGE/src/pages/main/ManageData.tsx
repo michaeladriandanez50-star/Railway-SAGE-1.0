@@ -34,7 +34,7 @@ export default function ManageData({ setScreen }: { setScreen: (s: any) => void 
   // 2. Function para kumuha ng data mula sa MySQL
   const fetchData = async (tab: Tab) => {
     try {
-      const response = await fetch(`https://krdcxvsf-5000.asse.devtunnels.ms/api/data/${tab}`);
+      const response = await fetch(`https://sage-backend-production-d170a99e.up.railway.app/api/data/${tab}`);
       if (!response.ok) throw new Error('Failed to fetch data');
       const data = await response.json();
       
@@ -124,7 +124,7 @@ export default function ManageData({ setScreen }: { setScreen: (s: any) => void 
     formData.append('file', file);
 
     try {
-      const response = await fetch(`https://krdcxvsf-5000.asse.devtunnels.ms/api/upload/${activeTab}`, {
+      const response = await fetch(`https://sage-backend-production-d170a99e.up.railway.app/api/upload/${activeTab}`, {
         method: 'POST',
         body: formData 
       });
@@ -156,7 +156,7 @@ export default function ManageData({ setScreen }: { setScreen: (s: any) => void 
     
     try {
       // 1. Magpadala ng DELETE request sa backend
-      const response = await fetch(`https://krdcxvsf-5000.asse.devtunnels.ms/api/data/${activeTab}/${itemToDelete.id}`, {
+      const response = await fetch(`https://sage-backend-production-d170a99e.up.railway.app/api/data/${activeTab}/${itemToDelete.id}`, {
         method: 'DELETE'
       });
       
@@ -197,7 +197,7 @@ export default function ManageData({ setScreen }: { setScreen: (s: any) => void 
 
     try {
       // 1. Magpadala ng PUT request sa backend
-      const response = await fetch(`https://krdcxvsf-5000.asse.devtunnels.ms/api/data/${activeTab}/${itemToEdit.id}`, {
+      const response = await fetch(`https://sage-backend-production-d170a99e.up.railway.app/api/data/${activeTab}/${itemToEdit.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ description: newDescription })
