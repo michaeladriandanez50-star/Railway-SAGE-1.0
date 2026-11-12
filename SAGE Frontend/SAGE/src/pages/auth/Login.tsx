@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Screen } from '../../types';
-import sageLogo from '../../public/sage-logo.png';
+import sageLogo from '../../assets/sage-logo.png';
+
 
 export default function Login({ setScreen }: { setScreen: (s: Screen) => void }) {
   // States para sa main Login flow
